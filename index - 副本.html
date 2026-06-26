@@ -152,40 +152,6 @@ function h2() {
             background: linear-gradient(145deg, #7f1d1d 0%, #991b1b 100%);
             border-color: #dc2626;
         }
-
-        /* 创始人卡片特殊样式 */
-        .founder-card {
-            background: rgba(255, 255, 255, 0.10);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 1.5rem;
-            padding: 1.5rem 2rem;
-            transition: all 0.3s ease;
-        }
-        .founder-card:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: scale(1.01);
-        }
-        .founder-avatar {
-            border: 3px solid rgba(255, 255, 255, 0.4);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-            object-fit: cover;
-        }
-        .founder-quote {
-            quotes: "“" "”" "‘" "’";
-        }
-        .founder-quote::before {
-            content: open-quote;
-            font-size: 2rem;
-            color: rgba(255,215,0,0.6);
-            margin-right: 0.1rem;
-        }
-        .founder-quote::after {
-            content: close-quote;
-            font-size: 2rem;
-            color: rgba(255,215,0,0.6);
-            margin-left: 0.1rem;
-        }
     </style>
 </head>
 <body class="bg-financial-light dark:bg-financial-dark text-gray-900 dark:text-gray-100 font-sans overflow-x-hidden">
@@ -222,31 +188,6 @@ function h2() {
                 <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
                  Professional Investment Analysis
 Are you still worried about market losses? Our team consists of professional analysts who offer free online services. We communicate and collaborate daily. Yes, but we work in the financial industry. Have you ever thought about changing your current situation? Have you ever thought about living a happy life?</p>
-            </div>
-
-            <!-- ===== 新增创始人人设卡片 ===== -->
-            <div class="founder-card max-w-4xl mx-auto text-left mb-10">
-                <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
-                    <!-- 头像 -->
-                    <div class="flex-shrink-0">
-                        <img src="img/a1.jpg" alt="Rohan Verma" class="founder-avatar w-24 h-24 md:w-32 md:h-32 rounded-full">
-                    </div>
-                    <!-- 文本内容 -->
-                    <div class="flex-1 text-white">
-                        <div class="flex flex-wrap items-center gap-2 mb-1">
-                            <span class="text-xl font-bold">Rohan Verma</span>
-                            <span class="text-sm text-blue-200 font-medium bg-white/20 px-3 py-0.5 rounded-full">Co-Founder</span>
-                        </div>
-                        <div class="founder-quote text-sm md:text-base text-blue-50/90 leading-relaxed">
-                            In our way of life, human nature can be both simple and complex; the complexities in life are creations of the human mind. We wish to keep things simple in the way we invest, and we always remain mindful of the words of the legendary investor Mr. Warren Buffett: 
-                            <span class="italic text-white font-medium">“Be fearful when others are greedy, and greedy when others are fearful.”</span> 
-                            <span class="italic text-white font-medium">“Risk comes from not knowing what you are doing.”</span> 
-                            <span class="italic text-white font-medium">“Rule No. 1: Never lose money. Rule No. 2: Never forget Rule No. 1.”</span>
-                            <br>
-                            Our core values have been shaped by our learnings and include capital preservation, focus, and investments driven by value rather than blind pursuit. Our guiding principle is to bring investment ideas to our audience that are aligned with these core values. We are committed to building long-term relationships with our investors.
-                        </div>
-                    </div>
-                </div>
             </div>
             
             <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
@@ -430,7 +371,16 @@ Are you still worried about market losses? Our team consists of professional ana
                 </div>
             </div>
             
-        
+            <div class="text-center bg-gradient-to-r from-financial-primary/10 to-financial-secondary/10 rounded-2xl p-8 mb-12">
+                <h3 class="text-2xl font-bold mb-4">Free Portfolio Creation Tools</h3>
+                <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                    We help you plan your investment portfolio and gradually achieve long-term financial goals.
+                </p>
+                <button onclick="h2()" class="cta-button-primary text-white px-8 py-3 rounded-full text-lg font-semibold">
+                    Join Our Community Now
+                </button>
+            </div>
+            
             <div class="text-center">
                 <img src="img/4.jpg" alt="Investment Education Resources" class="mx-auto rounded-2xl shadow-2xl max-w-2xl w-full">
             </div>
@@ -502,7 +452,40 @@ Are you still worried about market losses? Our team consists of professional ana
         </div>
     </section>
 
- 
+    <!-- Our Promise Section -->
+    <section class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold gradient-text-animated mb-8">Our Commitment to You</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div class="text-left">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-primary to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Education-Focused Approach</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        We focus on providing reliable learning resources and practical tools for user education.
+                    </p>
+                </div>
+                
+                <div class="text-left">
+                    <div class="w-16 h-16 bg-gradient-to-br from-financial-accent to-green-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Transparency & Professionalism</h3>
+                    <p class="text-gray-600 dark:text-gray-400">
+                        All information sources are based on data analysis and market trends, ensuring authenticity and reliability.
+                    </p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </section>
 
     <!-- Risk Disclosure Section -->
     <section class="py-16 bg-gray-100 dark:bg-gray-800">
@@ -551,9 +534,9 @@ Are you still worried about market losses? Our team consists of professional ana
                 <div>
                     <h4 class="text-lg font-semibold mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Risk Disclosure</a></li>
+                        <li><a href="Privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="risk.html" class="text-gray-400 hover:text-white transition-colors">Risk Disclosure</a></li>
                     </ul>
                 </div>
                 
@@ -569,7 +552,7 @@ Are you still worried about market losses? Our team consists of professional ana
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-500">
-                    © 2026 Stock Investment Education Platform. All rights reserved. | Educational content only - Not investment advice.
+                    © 2024 Stock Investment Education Platform. All rights reserved. | Educational content only - Not investment advice.
                 </p>
             </div>
         </div>
@@ -586,6 +569,9 @@ Are you still worried about market losses? Our team consists of professional ana
     </div>
 
     <script>
+        // h2 function to redirect to qq.com
+        
+
         // Dark mode detection and handling
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
             document.documentElement.classList.add('dark');
